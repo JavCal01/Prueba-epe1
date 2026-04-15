@@ -1,0 +1,18 @@
+{% extends 'socios/base.html' %}
+
+{% block title %}Lista de Organizaciones{% endblock %}
+
+
+{% block content %}
+    <h1>Lista de Organizaciones</h1>
+
+        {% for org in organizaciones %}
+            <div>
+                <strong>
+                    <a href="/organizacion/{{ org.id }}/">{{ org.Nombre }}</a>
+                </strong>
+                - {{ org.Tipo}}
+            </div>
+
+        {% endfor %}
+{% endblock %}
